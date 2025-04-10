@@ -20,6 +20,7 @@ default-extensions:
   - ScopedTypeVariables
   - QuasiQuotes
   - OverloadedStrings
+  - ImportQualifiedPost
 dependencies:
   - base >= 4.7 && < 5
   - haskell-src-meta

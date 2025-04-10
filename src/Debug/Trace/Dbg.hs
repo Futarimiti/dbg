@@ -1,13 +1,10 @@
 -- | More convenient @trace@, stolen from rust
-module Debug.Trace.Dbg
-  ( dbg
-  , dbgM
-  ) where
+module Debug.Trace.Dbg (dbg, dbgM) where
 
 import Debug.Trace
+import Language.Haskell.Meta.Parse
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote
-import Language.Haskell.Meta.Parse
 import Text.Printf
 
 -- | @[dbg|\<expr\>|]@ evaluates @\<expr\>@ to @\<value\>@,

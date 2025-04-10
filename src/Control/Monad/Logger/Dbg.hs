@@ -1,20 +1,20 @@
 -- | Interoperability for the monad-logger library.
 module Control.Monad.Logger.Dbg
   ( dbgML
-  -- * Specialised TH logging
-  -- For convenience
+    -- * Specialised TH logging
+    -- For convenience
   , dbgDebug
+  , dbgError
   , dbgInfo
   , dbgWarn
-  , dbgError
   ) where
 
+import Control.Monad.Logger
+import Data.Text                   qualified as Text
+import Language.Haskell.Meta.Parse
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote
-import Language.Haskell.Meta.Parse
-import Control.Monad.Logger
 import Text.Printf
-import qualified Data.Text as Text
 
 -- | Log with chosen @<LogLevel>@.
 --
